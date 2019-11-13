@@ -1,0 +1,21 @@
+.chat-side
+  .side-header
+    .side-header__box
+      %p.side-header__box__username player name
+      %ul.side-header__box__menu
+        %li.side-header__box__menu__new-group<
+          =link_to "#" do
+            = fa_icon 'edit'
+
+        %li.side-header__box__menu__edit-user<
+          =link_to "#" do
+            = fa_icon 'cog'
+
+  .groups
+    .group
+      %p.group__group-name スーパーマリオワールド
+      %p.group__latest-message でっていう！
+    .group
+      %p.group__group-name2 マリオカート
+      %p.group__latest-message2 ヒャッホーウ！
+

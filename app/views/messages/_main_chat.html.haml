@@ -1,0 +1,28 @@
+.chat-main
+  .main-header
+    .main-header__leftbox
+      %h2.main-header__left-box__current-group スーパーマリオワールド
+      %ul.main-header__left-box__member-list 
+        Member :
+        %li.main-header__left-box__member<
+          マリオ
+        %li.main-header__left-box__member2<
+          ルイージ
+        %li.main-header__left-box__member3<
+          ヨッシー
+    .main-header__edit-btn Edit
+
+  .messages
+    .message
+      .message__upper-info
+        %p.massage__upper-talker ヨッシー
+        %p.massage__upper-date 2019/01/01(thu) 00:00:01
+      %p.message__text でっていう！
+  .form
+    = form_tag('/', method: :post, class: "new_massage",id:"3") 
+    .input-box
+      %input.input-box__text{:name => "message", :placeholder => "type a message", :type => "text", :value => ""}/
+      %label{class: "input-box__image"}
+        = fa_icon 'image'
+        %input{class: "input-box__image__file", type: "file"}
+    = submit_tag 'Send', :class => "submit_btn"    
