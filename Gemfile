@@ -56,4 +56,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'haml-rails'
 
 # Fontawesomeの導入
-gem 'font-awesome-rails'
+ gem 'font-awesome-rails'
+
+# deviseの導入
+# rails g devise:install を忘れて一度rollbackしている
+gem 'devise'
