@@ -13,10 +13,10 @@
             = fa_icon 'cog'
 
   .groups
-    .group
-      %p.group__group-name スーパーマリオワールド
-      %p.group__latest-message でっていう！
-    .group
-      %p.group__group-name2 マリオカート
-      %p.group__latest-message2 ヒャッホーウ！
+    - current_user.groups.each do |group|
+      .group
+        = link_to group_messages_path(group) do
+          .group__group-name 
+            = group.name 
+          .group__latest-message メッセージはまだないよ！
 
