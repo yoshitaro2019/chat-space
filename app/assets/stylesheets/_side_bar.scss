@@ -1,9 +1,9 @@
 .chat-side {
   width: 300px;
-  color: #fff;
+  color:  $white;
   float: left;
   .side-header {
-    background-color: #253141;
+    background-color: $side_blue_dark;
     height: 100px;
     display: flex;
     align-items: center;
@@ -22,7 +22,7 @@
           display: inline;
           margin-left: 0.3rem;
           a {
-            color: #fff;
+            color:  $white;
           }
         } 
       }
@@ -30,7 +30,7 @@
   }
   .groups {
     height: calc(100vh - 100px);
-    background-color: #2f3e51;
+    background-color: $side_blue_light;
     padding: 20px 20px 0;
     overflow: scroll;
     .group {
@@ -38,9 +38,15 @@
       &__group-name {
         font-size: 15px;
         margin-bottom: 5px;
+        color: $white;
       }
       &__latest-message {
         font-size: 11px;
+        color: $white;
+      }
+      a{
+        color: $white;
+        text-decoration: none;
       }
       &__group-name2 {
         font-size: 15px;

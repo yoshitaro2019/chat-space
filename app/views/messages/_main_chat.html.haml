@@ -10,7 +10,9 @@
           ルイージ
         %li.main-header__left-box__member3<
           ヨッシー
-    .main-header__edit-btn Edit
+    .main-header__edit-btn 
+      =link_to edit_group_path(current_user) do
+        = "Edit"
 
   .messages
     .message
