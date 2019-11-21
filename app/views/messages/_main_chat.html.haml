@@ -15,11 +15,9 @@
         = "Edit"
 
   .messages
-    .message
-      .message__upper-info
-        %p.massage__upper-talker ヨッシー
-        %p.massage__upper-date 2019/01/01(thu) 00:00:01
-      %p.message__text でっていう！
+    = render @messages
+    -# = render partial: 'message', collection: @messages
+
   .form
     = form_for [@group, @message] do |f|
       .input-box
