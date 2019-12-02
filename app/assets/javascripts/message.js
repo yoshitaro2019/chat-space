@@ -1,45 +1,26 @@
 $(function(){
 
   function buildMessage(message){
-    if (message.image){
-      var html = `<div class="message">
-      <div class="message__upper-info">
-      <div class="massage__upper-talker">
-      ${message.user_name}
-      </div>
-      <div class="massage__upper-date">
-      ${message.created_at}
-      </div>
-      </div>
-      <div class="message__text">
-      <p class="message__text__content">
-      ${message.content}
-      </p>
-      </div>
-      <img src=${message.image}>
-      
-      </div>`
-    } else {
+    var image = message.image? `<img src= ${ message.image }>` : "";
+
     var html = `<div class="message">
-    <div class="message__upper-info">
-    <div class="massage__upper-talker">
-    ${message.user_name}
-    </div>
-    <div class="massage__upper-date">
-    ${message.created_at}
-    
-    </div>
-    </div>
-    <div class="message__text">
-    <p class="message__text__content">
-    ${message.content}
-    </p>
-    </div>
-    </div>`
-    }
+                <div class="message__upper-info">
+                <div class="massage__upper-talker">
+                ${message.user_name}
+                </div>
+                <div class="massage__upper-date">
+                ${message.created_at}
+                </div>
+                </div>
+                <div class="message__text">
+                <p class="message__text__content">
+                ${message.content}
+                </p>
+                </div>
+                ${image}
+                </div>`
     return html
   }
-
 
 
   $('#new_message').on('submit',function(e){
