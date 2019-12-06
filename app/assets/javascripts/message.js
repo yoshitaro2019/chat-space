@@ -1,26 +1,4 @@
 $(function(){
- 
-  function buildHTML(message){
-    var image = message.image? `<img src= ${ message.image }>` : "";
-
-    var html = `<div class="message" data-message-id="${message.id}"> 
-                <div class="message__upper-info">
-                <div class="massage__upper-talker">
-                ${message.user_name}
-                </div>
-                <div class="massage__upper-date">
-                ${message.created_at}
-                </div>
-                </div>
-                <div class="message__text">
-                <p class="message__text__content">
-                ${message.content}
-                </p>
-                </div>
-                ${image}
-                </div>`
-    return html;
-  }
 
   function buildMessage(message){
     var image = message.image? `<img src= ${ message.image }>` : "";
@@ -87,7 +65,7 @@ $(function(){
       .done(function(messages){
         var insertHtml = '';
         $.each(messages, function(i, message){
-          insertHtml += buildHTML(message)
+          insertHtml += buildMessage(message)
         });
         $('.messages').append(insertHtml);
         $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
