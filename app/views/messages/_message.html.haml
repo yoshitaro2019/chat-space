@@ -1,4 +1,4 @@
-.message
+.message{data:{message_id:"#{message.id}"}}
   .message__upper-info
     .massage__upper-talker
       = message.user.name
@@ -7,6 +7,6 @@
 
   .message__text
     - if message.content.present?
-      %p.message__text__content
+      %p{class:"message__text__content"}
         = message.content
     = image_tag message.image.url, class: 'message__text__image' if message.image.present?
