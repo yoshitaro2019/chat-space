@@ -84,3 +84,5 @@ gem 'devise'
 # carrierwave & mini_magickの導入（画像関係）
 gem 'carrierwave'
 gem 'mini_magick'
+
+gem 'fog-aws'
